@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "207505771968",
+    "firebase_url": "https://mi-lista-de-la-compra-1545f.firebaseio.com",
+    "project_id": "mi-lista-de-la-compra-1545f",
+    "storage_bucket": "mi-lista-de-la-compra-1545f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:207505771968:android:1dd0578fc4bc7c51",
+        "android_client_info": {
+          "package_name": "com.example.melania.milistadecompras"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "207505771968-dlorkbr4gpbesk9qt3ivcf4mqii6dc25.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.melania.milistadecompras",
+            "certificate_hash": "e1016580cc61328810214ab7473459d98a070f39"
+          }
+        },
+        {
+          "client_id": "207505771968-mqfeduskp9ng2tftmaa0lnqvhq4pjcak.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVCe2cxdP1wYFTQBVYZ9jx0Z-cJoolwmI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "207505771968-mqfeduskp9ng2tftmaa0lnqvhq4pjcak.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
