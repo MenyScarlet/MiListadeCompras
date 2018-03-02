@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Mi Lista de Compras</string>
+    <string name="splash_name">Tu lista de compras</string>
+    <string name = "btn_list_new">Crea una nueva lista</string>
+    <string name = "btn_list_save">Ver listas guardadas</string>
 </resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.melania.milistadecompras.BMenuActivity"
+    android:gravity="center"
+    android:padding="@dimen/d20"
+    android:background="@drawable/fondo_flores_2">
+
+    <Button
+        android:id="@+id/button2"
+        android:background="@drawable/fondo_btn_rosa"
+        android:onClick="clickMenuListNew"
+        android:fontFamily="@font/justbe"
+        style="@style/EstBtnMenuRosa"
+        />
+
+
+
+    <Button
+        android:id="@+id/button3"
+        android:fontFamily="@font/justbe"
+        android:textSize="@dimen/d25"
+        android:onClick="clickMenuListSave"
+        android:background="@drawable/fondo_btn_amarillo"
+        style="@style/EstBtnMenuAmarillo"/>
+</LinearLayout>

@@ -8,4 +8,26 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name= "EstiloFuenteRosa">
+        <item name= "android:textColor">@color/PinkRed</item>
+        <item name= "android:textStyle">bold</item>
+
+    </style>
+
+    <style name = "EstBtnMenuRosa">
+        <item name= "android:layout_width">match_parent</item>
+        <item name= "android:layout_height">@dimen/d50</item>
+        <item name= "android:text">@string/btn_list_new</item>
+        <item name= "android:layout_margin">@dimen/d25</item>
+        <item name= "android:textSize">@dimen/d25</item>
+    </style>
+
+    <style name = "EstBtnMenuAmarillo">
+        <item name= "android:layout_width">match_parent</item>
+        <item name= "android:layout_height">@dimen/d50</item>
+        <item name= "android:text">@string/btn_list_save</item>
+        <item name= "android:layout_margin">@dimen/d25</item>
+        <item name= "android:textSize">@dimen/d25</item>
+    </style>
+
 </resources>
