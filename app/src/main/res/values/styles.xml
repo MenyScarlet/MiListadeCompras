@@ -30,4 +30,9 @@
         <item name= "android:textSize">@dimen/d25</item>
     </style>
 
+    <style name="EstTexItem">
+        <item name="android:textSize">@dimen/d15</item>
+        <item name="android:textColor">@color/Black</item>
+    </style>
+
 </resources>

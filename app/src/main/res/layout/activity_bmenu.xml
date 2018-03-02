@@ -16,15 +16,16 @@
         android:onClick="clickMenuListNew"
         android:fontFamily="@font/justbe"
         style="@style/EstBtnMenuRosa"
+        android:textAllCaps="?android:attr/windowOverscan"
         />
-
 
 
     <Button
         android:id="@+id/button3"
-        android:fontFamily="@font/justbe"
-        android:textSize="@dimen/d25"
-        android:onClick="clickMenuListSave"
+        style="@style/EstBtnMenuAmarillo"
+        android:autoSizeTextType="none"
         android:background="@drawable/fondo_btn_amarillo"
-        style="@style/EstBtnMenuAmarillo"/>
+        android:fontFamily="@font/justbe"
+        android:onClick="clickMenuListSave"
+        android:textAllCaps="?android:attr/windowOverscan" />
 </LinearLayout>

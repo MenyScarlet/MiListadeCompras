@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/d75"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:id="@+id/LcTvCategoria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="TextView"
+        android:paddingLeft="@dimen/d5"
+        style="@style/EstTexItem"
+        android:textStyle="bold"
+        android:textAllCaps="true"/>
+
+    <TextView
+        android:id="@+id/LcTvMarca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:hint="Marca"
+        android:paddingLeft="@dimen/d15"
+        android:textSize="@dimen/d10"
+        android:textColor="@color/Black"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/LcCbProducto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/LcTvNombre"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="TextView"
+            style="@style/EstTexItem"
+             />
+
+        <TextView
+            android:id="@+id/LcTvPrecio"
+            android:layout_width="@dimen/d200"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="TextView"
+            style="@style/EstTexItem"/>
+    </LinearLayout>
+
+</LinearLayout>
