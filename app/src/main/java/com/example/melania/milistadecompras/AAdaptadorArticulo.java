@@ -41,17 +41,12 @@ public class AAdaptadorArticulo extends ArrayAdapter<AArticulo> {
                 item.findViewById(R.id.LcTvCategoria);
         tvCategoria.setText(articulos.get(position).getCategoria() );
 
-        //GetPrecio
+        //GetPrecio (revisar si algo sale mal)***********************
+        Double precio;
         TextView tvPrecio = (TextView)
                 item.findViewById(R.id.LcTvPrecio);
-        tvPrecio.setText(articulos.get(position).getPrecio() );
+        precio = Double.parseDouble(tvPrecio.getText().toString());
 
-        String imagen = articulos.get(position).getImagen();
-        int idImagen = c.getResources().getIdentifier(imagen,
-                "drawable", c.getPackageName());
-        ImageView iv_logo = (ImageView)
-                item.findViewById(R.id.item_logo);
-        iv_logo.setImageResource(idImagen);
         return item;
     }
 }

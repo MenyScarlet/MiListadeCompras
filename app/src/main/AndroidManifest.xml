@@ -18,6 +18,7 @@
         </activity>
         <activity android:name=".BMenuActivity" />
         <activity android:name=".CListaCompraActivity" />
+        <activity android:name=".DListaArticulosActivity"></activity>
     </application>
 
 </manifest>

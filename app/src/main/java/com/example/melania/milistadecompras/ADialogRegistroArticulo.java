@@ -23,6 +23,7 @@ public class ADialogRegistroArticulo extends DialogFragment {
         LayoutInflater inflater = getActivity().getLayoutInflater();
         final View viewLayout = inflater.inflate(R.layout.dialog_registro_articulo,null);
         builder.setView(viewLayout)
+
                 .setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         EditText etNombre = (EditText) viewLayout.findViewById(R.id.RegisEtNombre);
