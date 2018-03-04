@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".BMenuActivity" />
-        <activity android:name=".CListaCompraActivity"></activity>
+        <activity android:name=".CListaCompraActivity" />
     </application>
 
 </manifest>

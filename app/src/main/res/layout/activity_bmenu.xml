@@ -12,20 +12,32 @@
 
     <Button
         android:id="@+id/button2"
+
         android:background="@drawable/fondo_btn_rosa"
-        android:onClick="clickMenuListNew"
         android:fontFamily="@font/justbe"
+        android:textAllCaps="false"
+        android:onClick="clickMenuListNew"
         style="@style/EstBtnMenuRosa"
-        android:textAllCaps="?android:attr/windowOverscan"
         />
 
 
     <Button
         android:id="@+id/button3"
-        style="@style/EstBtnMenuAmarillo"
-        android:autoSizeTextType="none"
+
         android:background="@drawable/fondo_btn_amarillo"
         android:fontFamily="@font/justbe"
+        android:textAllCaps="false"
         android:onClick="clickMenuListSave"
-        android:textAllCaps="?android:attr/windowOverscan" />
+        style="@style/EstBtnMenuRosa2"
+        />
+
+    <Button
+        android:id="@+id/button4"
+
+        android:background="@drawable/fondo_btn_amarillo"
+        android:fontFamily="@font/justbe"
+        android:textAllCaps="false"
+        android:onClick="clickMenuListItems"
+        style="@style/EstBtnMenuRosa3"
+        />
 </LinearLayout>

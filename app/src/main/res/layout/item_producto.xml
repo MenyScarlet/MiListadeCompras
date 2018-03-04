@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="@dimen/d75"
     android:orientation="vertical"
+    android:background="@drawable/fondo_item_list"
     >
 
     <TextView
