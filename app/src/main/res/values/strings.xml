@@ -4,4 +4,8 @@
     <string name="btn_list_new">Crea una nueva lista</string>
     <string name="btn_list_save">Ver listas guardadas</string>
     <string name="btn_list_items">Ver artículos guardados</string>
+    <string name="btn_guardar">Guardar</string>
+    <string name="btn_cancelar">Cancelar</string>
+    <string name="btn_menu">Volver al Menú</string>
+    <string name="btn_listas_guardadas">Ver Listas Guardadas</string>
 </resources>

@@ -37,6 +37,6 @@ public class CListaCompraActivity extends AppCompatActivity {
     }
 
     private void cargarDatos(){
-        lista_articulos.add(new AArticulo("","","","",0));
+        lista_articulos.add(new AArticulo("","","","",0,false));
     }
 }

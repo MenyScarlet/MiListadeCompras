@@ -14,6 +14,7 @@ public class AArticulo implements Parcelable {
     String mercado;
     String categoria;
     double precio;
+    boolean articulo;
 
     //CREATOR
     public static final Parcelable.Creator<AArticulo> CREATOR = new
@@ -31,12 +32,16 @@ public class AArticulo implements Parcelable {
     }
 
     //Constructor
-    public AArticulo(String nombre, String marca, String mercado, String categoria, double precio) {
+
+
+    public AArticulo(String nombre, String marca, String mercado, String categoria, double precio,
+                     boolean articulo) {
         this.nombre = nombre;
         this.marca = marca;
         this.mercado = mercado;
         this.categoria = categoria;
         this.precio = precio;
+        this.articulo = articulo;
     }
 
     //Constructor recibiendo parametros
@@ -89,6 +94,13 @@ public class AArticulo implements Parcelable {
         this.precio = precio;
     }
 
+    public boolean isArticulo() {
+        return articulo;
+    }
+
+    public void setArticulo(boolean articulo) {
+        this.articulo = articulo;
+    }
 
     //Implementar metodo parceable
     @Override
@@ -105,7 +117,6 @@ public class AArticulo implements Parcelable {
         parcel.writeString(this.categoria);
         parcel.writeDouble(this.precio);
 
-
     }
 
     //Creamos un metodo readFromParcel que usaremos para llamarlo en el
@@ -117,6 +128,7 @@ public class AArticulo implements Parcelable {
         this.mercado = p.readString();
         this.categoria = p.readString();
         this.precio = p.readDouble();
+
 
 
     }
