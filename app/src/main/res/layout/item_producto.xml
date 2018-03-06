@@ -39,7 +39,6 @@
             android:id="@+id/LcCbProducto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:button="@drawable/fondo_checkbox"
             android:layout_margin="@dimen/d5"
             android:layout_gravity="center"/>
 

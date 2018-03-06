@@ -46,11 +46,8 @@ public class AAdaptadorArticulo extends ArrayAdapter<AArticulo> {
         Double precio;
         TextView tvPrecio = (TextView)
                 item.findViewById(R.id.LcTvPrecio);
-        precio = Double.parseDouble(tvPrecio.getText().toString());
 
-        CheckBox cbProducto = (CheckBox)
-                item.findViewById(R.id.LcCbProducto);
-        //cbProducto.setChecked(articulos.isChequed();
+        tvPrecio.setText(articulos.get(position).getPrecio() + "");
 
         return item;
     }

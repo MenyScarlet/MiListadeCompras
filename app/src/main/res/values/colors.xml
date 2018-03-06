@@ -81,7 +81,7 @@
     <color name="LightGoldenrodYellow">#FAFAD2</color>
     <color name="LightGreen">#90EE90</color>
     <color name="LightGrey">#D3D3D3</color>
-    <color name="LightPink">#FFB6C1</color>
+    <color name="LightPink">#f9cad1</color>
     <color name="LightSalmon">#FFA07A</color>
     <color name="LightSeaGreen">#20B2AA</color>
     <color name="LightSkyBlue">#87CEFA</color>
@@ -169,5 +169,6 @@
     <color name="azulFuerte">#0A59A8</color>
     <color name="azulMedio">#0E89E8</color>
     <color name="azulClaro">#B8C8FF</color>
+    <color name="Rosabotones">#F75685</color>
 </resources>
 

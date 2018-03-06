@@ -33,7 +33,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/d150"
             android:layout_weight="1"
-            app:srcCompat="@mipmap/save_piggy"
+            app:srcCompat="@drawable/piggybank"
 
             android:layout_below="@id/textView"/>
     </RelativeLayout>
