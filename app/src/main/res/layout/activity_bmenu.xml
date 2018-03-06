@@ -13,7 +13,7 @@
     <Button
         android:id="@+id/button2"
 
-        android:background="@drawable/fondo_btn_rosa"
+        android:background="@drawable/fondo_btn_rosa_presionado"
         android:fontFamily="@font/justbe"
         android:text="@string/btn_list_new"
         android:onClick="clickMenuListNew"

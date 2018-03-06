@@ -64,7 +64,7 @@
         <item name= "android:text">@string/btn_listas_guardadas</item>
         <item name= "android:layout_margin">@dimen/d5</item>
         <item name= "android:textAllCaps">false</item>
-        <item name= "android:background">@drawable/fondo_blanco</item>
+        <item name= "android:background">@drawable/fondo_rosa_claro</item>
         <item name= "android:textColor">@color/Black</item>
         <item name= "android:textSize">@dimen/d25</item>
         <item name= "android:gravity">center</item>
