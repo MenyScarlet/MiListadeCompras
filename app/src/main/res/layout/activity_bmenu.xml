@@ -15,7 +15,7 @@
 
         android:background="@drawable/fondo_btn_rosa"
         android:fontFamily="@font/justbe"
-        android:textAllCaps="false"
+        android:text="@string/btn_list_new"
         android:onClick="clickMenuListNew"
         style="@style/EstBtnMenuRosa"
         />
@@ -26,9 +26,10 @@
 
         android:background="@drawable/fondo_btn_amarillo"
         android:fontFamily="@font/justbe"
-        android:textAllCaps="false"
+        android:text="@string/btn_listas_guardadas"
         android:onClick="clickMenuListSave"
-        style="@style/EstBtnMenuRosa2"
+        style="@style/EstBtnMenuAmarillo"
+
         />
 
     <Button
@@ -36,8 +37,9 @@
 
         android:background="@drawable/fondo_btn_amarillo"
         android:fontFamily="@font/justbe"
-        android:textAllCaps="false"
+        android:text="@string/btn_list_items"
         android:onClick="clickMenuListItems"
-        style="@style/EstBtnMenuRosa3"
+        style="@style/EstBtnMenuAmarillo"
+
         />
 </LinearLayout>

@@ -17,36 +17,51 @@
 
         <Button
             android:id="@+id/button7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/btn_menu"
-            android:layout_marginRight="@dimen/d10"
-            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".70"
             android:fontFamily="@font/justbe"
-            android:background="@drawable/fondo_btn_amarillo"/>
+            style="@style/EstBtnListTopMenu"
+            android:onClick="clickVolverMenu"/>
 
         <Button
             android:id="@+id/button8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/btn_listas_guardadas"
-            android:layout_marginLeft="@dimen/d10"
-            android:textAllCaps="false"
-            android:fontFamily="@font/justbe"/>
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".30"
+            android:fontFamily="@font/justbe"
+            style="@style/EstBtnListGuardadasTop"
+            android:onClick="clickListasGuardadas"/>
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView3"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/d30"
-        android:textSize="@dimen/d15"
-        android:hint="Haz click en la tienda para añadir un Supermercado."
-        android:background="@drawable/fondo_blanco"
-        android:gravity="center_vertical"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
         android:padding="@dimen/d5"
-        android:layout_margin="@dimen/d5"/>
+        >
+
+        <TextView
+            android:id="@+id/LcTvSupermercado"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".10"
+            android:background="@drawable/fondo_blanco"
+            android:gravity="center_vertical"
+            android:hint="Haz click en la tienda para añadir un Super."
+            android:padding="@dimen/d5"
+            android:textSize="@dimen/d15"
+            android:layout_marginRight="@dimen/d5"
+            android:textAllCaps="true"/>
+
+        <ImageView
+            android:id="@+id/LcBtnShop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".90"
+            app:srcCompat="@mipmap/store"
+            android:onClick="clickAñadirTienda"/>
+    </LinearLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -79,23 +94,12 @@
                 android:id="@+id/LcBtnGuardar"
                 android:layout_width="@dimen/d150"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_toRightOf="@+id/LcBtnAñadir"
-                android:textAllCaps="false"
                 android:layout_weight=".60"
                 android:text="@string/btn_guardar"
-                android:background="@drawable/fondo_btn_rosa"
-                android:textSize="@dimen/d30"
-                android:fontFamily="@font/justbe"/>
+                android:fontFamily="@font/justbe"
+                android:onClick="clickGuardarLista"
+                style="@style/EstBtnRosa"/>
 
-            <ImageView
-                android:id="@+id/LcBtnShop"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_toRightOf="@+id/LcBtnGuardar"
-                android:layout_weight=".20"
-                app:srcCompat="@mipmap/store" />
         </LinearLayout>
 
     </RelativeLayout>

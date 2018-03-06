@@ -1,5 +1,6 @@
 package com.example.melania.milistadecompras;
 
+import android.content.Intent;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -20,6 +22,7 @@ import java.util.ArrayList;
 public class CListaCompraActivity extends AppCompatActivity {
 
     ListView lvCompra;
+    TextView tvSuper;
 
     DatabaseReference dbRef;
     ValueEventListener valueEventListener;
@@ -31,8 +34,7 @@ public class CListaCompraActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_clista_compra);
 
-
-
+        tvSuper = (TextView)findViewById(R.id.LcTvSupermercado);
         lvCompra = (ListView)findViewById(R.id.LvListaCompra);
 
         cargarDatosFirebase();
@@ -41,11 +43,46 @@ public class CListaCompraActivity extends AppCompatActivity {
 
     }//FIN onCreate
 
+    public void clickVolverMenu (View view){
+
+        Intent i = new Intent(getApplicationContext(),BMenuActivity.class);
+        startActivity(i);
+
+        //Dialog ¿Estas seguro que deseas volver al menu sin guardar?
+
+    }
+
+    public void clickListasGuardadas (View view){
+
+        Intent i = new Intent(getApplicationContext(),EListasGuardadasActivity.class);
+
+        startActivity(i);
+
+    }
+
+    public void clickAñadirTienda (View view){
+
+        //Dialogo AÑADIR TIENDA
+
+    }
+
     public void clickAñadirArticulo (View view){
-        FragmentManager fragmentManager = getSupportFragmentManager();
+
+        Intent i = new Intent(getApplicationContext(),DListaArticulosActivity.class);
+        startActivity(i);
+
+        //Esto iria en la Activity de Articulos
+        /*FragmentManager fragmentManager = getSupportFragmentManager();
         ADialogRegistroArticulo dialogo = new ADialogRegistroArticulo();
 
-        dialogo.show(fragmentManager, "dialogPersonalizado");
+        dialogo.show(fragmentManager, "dialogPersonalizado");*/
+    }
+
+    public void clickGuardarLista (View view){
+
+        //Guardar datos en FireBase y en EListasGuardadasActivity
+        //Toast se ha guardado correctamente
+
     }
 
     private void cargarDatosFirebase(){
@@ -70,8 +107,6 @@ public class CListaCompraActivity extends AppCompatActivity {
         };
         dbRef.addValueEventListener(valueEventListener);//Cargar datos en TIEMPO REAL
     }
-
-
 
     private void cargarListView (DataSnapshot dataSnapshot){
 
