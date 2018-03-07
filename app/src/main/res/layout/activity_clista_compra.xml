@@ -46,18 +46,20 @@
             android:orientation="horizontal"
             android:padding="@dimen/d5">
 
-            <TextView
-                android:id="@+id/LcTvSupermercado"
+            <EditText
+                android:id="@+id/LcEtSupermercado"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginRight="@dimen/d5"
                 android:layout_weight=".10"
+                android:ems="10"
+                android:inputType="textPersonName"
                 android:background="@drawable/fondo_rosa_claro"
                 android:gravity="center_vertical"
-                android:hint="Haz click en la tienda para añadir un Super."
                 android:padding="@dimen/d5"
                 android:textAllCaps="true"
-                android:textSize="@dimen/d15" />
+                android:textSize="@dimen/d15"
+                android:layout_marginRight="@dimen/d5"
+                android:hint="Haz click en la tienda para añadir un Super." />
 
             <ImageView
                 android:id="@+id/LcBtnShop"
@@ -65,7 +67,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight=".90"
                 android:onClick="clickAñadirTienda"
-                app:srcCompat="@mipmap/store" />
+                app:srcCompat="@mipmap/store"
+                />
         </LinearLayout>
 
         <ListView

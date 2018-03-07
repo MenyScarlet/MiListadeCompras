@@ -23,7 +23,8 @@
             android:layout_weight="1"
             app:srcCompat="@mipmap/pink_home"
             android:layout_marginTop="@dimen/d10"
-            android:layout_marginRight="@dimen/d10"/>
+            android:layout_marginRight="@dimen/d10"
+            android:onClick="clickHome"/>
 
     </RelativeLayout>
 

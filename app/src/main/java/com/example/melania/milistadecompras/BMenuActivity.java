@@ -21,9 +21,15 @@ public class BMenuActivity extends AppCompatActivity {
 
     public void clickMenuListSave (View view){
 
+        Intent i = new Intent(getApplicationContext(),EListasGuardadasActivity.class);
+        startActivity(i);
+
     }
 
     public void clickMenuListItems (View view){
+
+        Intent i = new Intent(getApplicationContext(),DListaArticulosActivity.class);
+        startActivity(i);
 
     }
 

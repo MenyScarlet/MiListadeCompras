@@ -24,7 +24,7 @@
     <Button
         android:id="@+id/button3"
 
-        android:background="@drawable/fondo_btn_amarillo"
+        android:background="@drawable/fondo_btn_amarillo_presionado"
         android:fontFamily="@font/justbe"
         android:text="@string/btn_listas_guardadas"
         android:onClick="clickMenuListSave"
@@ -35,7 +35,7 @@
     <Button
         android:id="@+id/button4"
 
-        android:background="@drawable/fondo_btn_amarillo"
+        android:background="@drawable/fondo_btn_amarillo_presionado"
         android:fontFamily="@font/justbe"
         android:text="@string/btn_list_items"
         android:onClick="clickMenuListItems"

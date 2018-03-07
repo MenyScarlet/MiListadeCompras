@@ -6,14 +6,51 @@
     android:layout_height="match_parent"
     tools:context="com.example.melania.milistadecompras.DListaArticulosActivity">
 
-    <GridView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hola" />
-    </GridView>
+        <ListView
+            android:id="@+id/LaLvArticulos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="bottom"
+            android:padding="@dimen/d10">
+
+            <Button
+                android:id="@+id/button11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cancelar"
+                android:fontFamily="@font/justbe"
+                android:onClick="clickCancelarArticulo"/>
+
+            <Button
+                android:id="@+id/LpBtnNuevo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Nuevo"
+                android:fontFamily="@font/justbe"
+                android:onClick="clickNuevoArticulo"/>
+
+            <Button
+                android:id="@+id/button10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/LpBtnNuevo"
+                android:layout_weight="1"
+                android:text="Seleccionar"
+                android:fontFamily="@font/justbe"
+                android:onClick="clickSeleccionarArticulo"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
 </LinearLayout>
