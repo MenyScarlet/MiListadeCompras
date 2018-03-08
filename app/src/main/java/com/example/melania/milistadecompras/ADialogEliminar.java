@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AlertDialog;
+import android.view.View;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -40,9 +41,26 @@ public class ADialogEliminar extends DialogFragment {
                                 .child("articulos");
                         String articulos = lvArticulos.getSelectedItem().toString();
 
-                        dbRef.child(articulos).removeValue(new DatabaseReference.CompletionListener() {
+                        dbRef.child(articulos).removeValue(new DatabaseReference.
+                                CompletionListener() {
                             @Override
-                            public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
+                            public void onComplete(DatabaseError databaseError, DatabaseReference
+                                    databaseReference) {
+
+                                if (databaseError == null){
+
+                                    Toast.makeText(getActivity(),
+                                            "ELIMINADO CORRECTAMENTE",
+                                            Toast.LENGTH_LONG).show();
+                                    //limpiarFormulario();
+
+                                }else{
+
+                                    Toast.makeText(getActivity(),
+                                            "NO SE PUEDE ELIMINAR EL JUGADOR",
+                                            Toast.LENGTH_LONG).show();
+
+                                }
 
                             }
                         });
@@ -61,5 +79,11 @@ public class ADialogEliminar extends DialogFragment {
                 });
 
         return builder.create();
+    }
+
+    private void limpiarFormulario (View view) {
+
+        //Como se elimina el item entero de un listview?
+
     }
 }

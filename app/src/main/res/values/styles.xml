@@ -71,6 +71,31 @@
 
     </style>
 
+    <style name = "EstDialogPersoTv">
+
+        <item name= "android:layout_width">match_parent</item>
+        <item name= "android:layout_height">match_parent</item>
+        <item name= "android:layout_weight">.70</item>
+        <item name= "android:padding">@dimen/d5</item>
+        <item name= "android:textColor">@color/Black</item>
+        <item name= "android:gravity">center_vertical</item>
+
+    </style>
+
+    <style name = "EstDialogPersoEt">
+
+        <item name= "android:layout_width">match_parent</item>
+        <item name= "android:layout_height">match_parent</item>
+        <item name= "android:layout_weight">.30</item>
+        <item name= "android:ems">10</item>
+        <item name= "android:textColor">@color/Black</item>
+
+
+    </style>
+
+
+
+
 
 
 </resources>

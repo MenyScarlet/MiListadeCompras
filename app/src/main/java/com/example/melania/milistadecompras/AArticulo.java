@@ -34,8 +34,8 @@ public class AArticulo implements Parcelable {
     //Constructor
 
 
-    public AArticulo(String nombre, String marca, String mercado, String categoria, double precio,
-                     boolean articulo) {
+    public AArticulo(String nombre, String marca, String mercado, String categoria, double precio
+                     ) {
         this.nombre = nombre;
         this.marca = marca;
         this.mercado = mercado;

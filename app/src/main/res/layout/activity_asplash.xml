@@ -7,35 +7,36 @@
     android:background="@drawable/fondo_splash"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context="com.example.melania.milistadecompras.ASplashActivity">
+   tools:context="com.example.melania.milistadecompras.ASplashActivity">
 
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center">
-
-        <TextView
-            android:id="@+id/textView"
+    <!-- comentario -->
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/d10"
-            android:allowUndo="false"
-            android:fontFamily="@font/justbe"
-            android:gravity="center_horizontal"
-            android:text="@string/splash_name"
-            android:textColor="@color/PinkRed"
-            android:textSize="@dimen/d45"
-            android:textStyle="bold" />
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/d10"
+                android:allowUndo="false"
+                android:gravity="center_horizontal"
+                android:text="@string/splash_name"
+                android:textColor="@color/PinkRed"
+                android:textSize="@dimen/d45"
+                android:textStyle="bold"
+                />
+            <!--android:fontFamily="@font/justbe"-->
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="@dimen/d150"
             android:layout_weight="1"
-            app:srcCompat="@drawable/piggybank"
-
             android:layout_below="@id/textView"/>
+            <!--app:srcCompat="@drawable/piggybank"-->
+
     </RelativeLayout>
 
 </LinearLayout>

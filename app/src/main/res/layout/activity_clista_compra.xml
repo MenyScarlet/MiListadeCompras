@@ -20,18 +20,19 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight=".70"
-            android:fontFamily="@font/justbe"
             style="@style/EstBtnListTopMenu"
             android:onClick="clickVolverMenu"/>
+        <!--android:fontFamily="@font/justbe"-->
 
         <Button
             android:id="@+id/button8"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight=".30"
-            android:fontFamily="@font/justbe"
             style="@style/EstBtnListGuardadasTop"
             android:onClick="clickListasGuardadas"/>
+        <!--android:fontFamily="@font/justbe"-->
+
     </LinearLayout>
 
     <RelativeLayout
@@ -100,9 +101,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight=".60"
                 android:text="@string/btn_guardar"
-                android:fontFamily="@font/justbe"
                 android:onClick="clickGuardarLista"
                 style="@style/EstBtnRosa"/>
+            <!--android:fontFamily="@font/justbe"-->
 
         </LinearLayout>
 

@@ -4,6 +4,7 @@ package com.example.melania.milistadecompras;
  * Created by Melania on 04/03/2018.
  */
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,6 +29,10 @@ public class AAdaptadorCompra extends ArrayAdapter<AArticulo> {
                 LayoutInflater.from(getContext());
         View item = inflater.inflate(R.layout.item_producto, null);
 
+        if(articulos.get(position).getCategoria().equals("Pescado")){
+           // item.setBackground(R.drawable.fondo_cat_pescado);
+            item.setBackgroundColor(Color.BLUE);
+        }
         //GetNombre
         TextView tvNombre = (TextView)
                 item.findViewById(R.id.LcTvNombre);
