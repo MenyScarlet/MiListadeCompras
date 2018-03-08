@@ -18,7 +18,7 @@ import com.google.firebase.database.ValueEventListener;
  */
 
 
-public class DialogEliminar extends DialogFragment {
+public class ADialogEliminar extends DialogFragment {
 
     ListView lvArticulos;
 

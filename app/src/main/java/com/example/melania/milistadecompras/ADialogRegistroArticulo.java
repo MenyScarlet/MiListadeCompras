@@ -45,12 +45,14 @@ public class ADialogRegistroArticulo extends DialogFragment {
 
 
                         Toast.makeText(getActivity(),
-                                "El producto se ha guerdado correctamente",
-                                Toast.LENGTH_SHORT).show();
+                                "El producto se ha guardado correctamente",
+                                Toast.LENGTH_LONG).show();
 
                         dialog.cancel();
                     }
                 });
+
+
 
         return builder.create();
     }

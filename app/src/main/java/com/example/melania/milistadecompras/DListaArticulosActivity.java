@@ -48,6 +48,11 @@ public class DListaArticulosActivity extends AppCompatActivity {
 
     public void clickNuevoArticulo (View view){
 
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        ADialogRegistroArticulo dialogo = new ADialogRegistroArticulo();
+
+        dialogo.show(fragmentManager, "dialogPersonalizado");
+
         //dialogo
 
     }
@@ -100,7 +105,7 @@ public class DListaArticulosActivity extends AppCompatActivity {
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
 
                 FragmentManager fragmentManager = getSupportFragmentManager();
-                DialogEliminar dialogo = new DialogEliminar();
+                ADialogEliminar dialogo = new ADialogEliminar();
                 dialogo.show(fragmentManager, "dialogConfirmacino");
 
                 return true;
