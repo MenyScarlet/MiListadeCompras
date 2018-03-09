@@ -32,6 +32,12 @@ public class CListaCompraActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_clista_compra);
 
+        Bundle b = getIntent().getExtras();
+
+        if(b!=null){
+            b.getParcelableArrayList("lista_seleccionado");
+        }
+
         etSuper = (EditText) findViewById(R.id.LcEtSupermercado);
         lvCompra = (ListView)findViewById(R.id.LvListaCompra);
 
@@ -120,6 +126,10 @@ public class CListaCompraActivity extends AppCompatActivity {
             });*/
 
         }
+
+    }
+
+    public void clickDeleteArticulo (View view){
 
     }
 

@@ -52,7 +52,7 @@ public class AAdaptadorArticulo extends ArrayAdapter<AArticulo> {
         TextView tvPrecio = (TextView)
                 item.findViewById(R.id.LaTvPrecio);
 
-        tvPrecio.setText(articulos.get(position).getPrecio() + "");
+        tvPrecio.setText(articulos.get(position).getPrecio() + "" + " €");
 
         return item;
     }

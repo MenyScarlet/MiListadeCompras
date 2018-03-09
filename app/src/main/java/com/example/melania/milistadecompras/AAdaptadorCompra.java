@@ -5,6 +5,7 @@ package com.example.melania.milistadecompras;
  */
 import android.content.Context;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,8 @@ import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 import java.util.ArrayList;
+
+import static com.example.melania.milistadecompras.R.drawable.fondo_cat_pescado;
 
 
 public class AAdaptadorCompra extends ArrayAdapter<AArticulo> {
@@ -29,9 +32,24 @@ public class AAdaptadorCompra extends ArrayAdapter<AArticulo> {
                 LayoutInflater.from(getContext());
         View item = inflater.inflate(R.layout.item_producto, null);
 
+        if(articulos.get(position).getCategoria().equals("Carne")){
+            //item.setBackgroundDrawable(R.drawable.fondo_cat_pescado);
+            item.setBackgroundColor(Color.RED);
+        }
+
         if(articulos.get(position).getCategoria().equals("Pescado")){
-           // item.setBackground(R.drawable.fondo_cat_pescado);
+            //item.setBackgroundDrawable(R.drawable.fondo_cat_pescado);
             item.setBackgroundColor(Color.BLUE);
+        }
+
+        if(articulos.get(position).getCategoria().equals("Verduras")){
+            //item.setBackgroundDrawable(R.drawable.fondo_cat_pescado);
+            item.setBackgroundColor(Color.GREEN);
+        }
+
+        if(articulos.get(position).getCategoria().equals("Frutas")){
+           //item.setBackgroundDrawable(R.drawable.fondo_cat_pescado);
+            item.setBackgroundColor(Color.RED);
         }
         //GetNombre
         TextView tvNombre = (TextView)
@@ -47,12 +65,15 @@ public class AAdaptadorCompra extends ArrayAdapter<AArticulo> {
                 item.findViewById(R.id.LcTvCategoria);
         tvCategoria.setText(articulos.get(position).getCategoria() );
 
+        if (articulos.get(position).getCategoria().equals("Pescasdo")) {
+            //tvCategoria.setBackground(R.drawable.fondo_cat_pescado);
+        }
         //GetPrecio (revisar si algo sale mal)***********************
         Double precio;
         TextView tvPrecio = (TextView)
                 item.findViewById(R.id.LcTvPrecio);
 
-        tvPrecio.setText(articulos.get(position).getPrecio() + "");
+        tvPrecio.setText(articulos.get(position).getPrecio() + "" + " €");
 
         return item;
     }

@@ -37,6 +37,8 @@ public class ADialogEliminar extends DialogFragment {
                 .setPositiveButton("Si", new DialogInterface.OnClickListener()  {
                     public void onClick(DialogInterface dialog, int id) {
 
+                        
+
                         dbRef = FirebaseDatabase.getInstance().getReference()
                                 .child("articulos");
                         String articulos = lvArticulos.getSelectedItem().toString();

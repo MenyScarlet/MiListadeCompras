@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -25,6 +26,7 @@ public class DListaArticulosActivity extends AppCompatActivity {
     ValueEventListener valueEventListener;
 
     ArrayList<AArticulo> lista_articulos = new ArrayList<AArticulo>();
+    ArrayList<AArticulo> lista_seleccionados = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +36,8 @@ public class DListaArticulosActivity extends AppCompatActivity {
         lvArticulos = (ListView)findViewById(R.id.LaLvArticulos);
 
         cargarDatosFirebase();
+
+
 
 
 
@@ -58,7 +62,9 @@ public class DListaArticulosActivity extends AppCompatActivity {
     }
 
     public void clickSeleccionarArticulo (View view){
-
+Intent i = new Intent(getApplicationContext(), CListaCompraActivity.class);
+i.putExtra("lista_seleccionado",lista_seleccionados);
+startActivity(i);
     }
 
     private void cargarDatosFirebase(){
@@ -97,6 +103,13 @@ public class DListaArticulosActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
+              /*  lvArticulos.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
+                lvArticulos.setItemsCanFocus(false);*/
+              AArticulo articulo_seleccionado = ((AArticulo)adapterView.getItemAtPosition(i));
+              lista_seleccionados.add(articulo_seleccionado);
+                Toast.makeText(getApplicationContext(),"Has añadido a tu lista: "+articulo_seleccionado.getNombre(), Toast.LENGTH_LONG).show();
+
+                view.setVisibility(View.INVISIBLE);
             }
         });
 

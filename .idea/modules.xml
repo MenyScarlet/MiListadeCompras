@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/MiListadeCompras.iml" filepath="$PROJECT_DIR$/.idea/MiListadeCompras.iml" />
       <module fileurl="file://C:\Users\DIDACT\AndroidStudioProjects\MiListadeCompras\MiListadeCompras.iml" filepath="C:\Users\DIDACT\AndroidStudioProjects\MiListadeCompras\MiListadeCompras.iml" />
+      <module fileurl="file://C:\Users\Melania\AndroidStudioProjects\MiListadeCompras2\.idea\MiListadeCompras.iml" filepath="C:\Users\Melania\AndroidStudioProjects\MiListadeCompras2\.idea\MiListadeCompras.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/MiListadeCompras2.iml" filepath="$PROJECT_DIR$/.idea/MiListadeCompras2.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

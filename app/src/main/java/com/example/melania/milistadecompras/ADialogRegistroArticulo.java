@@ -34,34 +34,39 @@ public class ADialogRegistroArticulo extends DialogFragment {
         LayoutInflater inflater = getActivity().getLayoutInflater();
         final View viewLayout = inflater.inflate(R.layout.dialog_registro_articulo,null);
 
-        EditText etNombre = (EditText) viewLayout.findViewById(R.id.RegisEtNombre);
-        final String nombre = etNombre.getText().toString();
+        final EditText etNombre = (EditText) viewLayout.findViewById(R.id.RegisEtNombre);
 
-        EditText etMarca = (EditText) viewLayout.findViewById(R.id.RegisEtMarca);
-        final String marca = etMarca.getText().toString();
 
-        EditText etMercado = (EditText) viewLayout.findViewById(R.id.RegisEtMercado);
-        final String mercado = etMercado.getText().toString();
-
+        final EditText etMarca = (EditText) viewLayout.findViewById(R.id.RegisEtMarca);
+        final EditText etMercado = (EditText) viewLayout.findViewById(R.id.RegisEtMercado);
+        final EditText etPrecio = (EditText) viewLayout.findViewById(R.id.RegisEtPrecio);
+        etPrecio.setText("0");
         final Spinner spCategoria = (Spinner) viewLayout.findViewById(R.id.RegisSpCategoria);
+
         final String [] categorias = {"Selecciona", "Bebidas", "Carnes", "Cereales y Pan",
                 "Derivados de animales", "Dulces y Postres", "Frutas y Frutos secos"
                 , "Higiene", "Lacteos", "Legumbres", "Limpieza", "Mariscos",
                 "Pasta", "Pescado", "Verduras" };
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(viewLayout.getContext(),
                 android.R.layout.simple_expandable_list_item_1,categorias);
+
         spCategoria.setAdapter(adapter);
+
+
         builder.setView(viewLayout)
 
-                .setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+
+                .setPositiveButton("Guardar", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
 
-                      String categoria = spCategoria.getSelectedItem().toString();
+                         String categoria = spCategoria.getSelectedItem().toString();
+                         String stprecio = etPrecio.getText().toString();
+                         String nombre = etNombre.getText().toString();
+                         String marca = etMarca.getText().toString();
+                         String mercado = etMercado.getText().toString();
 
-                        EditText etPrecio = (EditText) viewLayout.findViewById(R.id.RegisEtPrecio);
-                        String stprecio = etPrecio.getText().toString();
 
-                        if(nombre.equals("") || categorias.equals("Selecciona")) {
+                        if(nombre.equals("") || categoria.equals("Selecciona")) {
 
                             Toast.makeText(getActivity(),
                                     "Debes de rellenar los campos obligatorios *",
@@ -75,7 +80,7 @@ public class ADialogRegistroArticulo extends DialogFragment {
                                     (nombre, marca, mercado, categoria, precio);
                             dbRef = FirebaseDatabase.getInstance().getReference().child("articulos");
 
-                             /*String nueva_clave = dbRef().push().setvalue(nuevojugador, new DatabaseReference.
+                             /*String nueva_clave = dbRef().push().setvalue(nuevoArticulo, new DatabaseReference.
                             CompletionListener(){*/
                              dbRef.child(nombre).setValue(nuevoArticulo,
                                      new DatabaseReference.CompletionListener(){
