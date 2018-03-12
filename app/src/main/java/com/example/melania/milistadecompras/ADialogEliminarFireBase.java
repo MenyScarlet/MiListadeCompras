@@ -1,5 +1,4 @@
 package com.example.melania.milistadecompras;
-
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -17,11 +16,10 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 /**
- * Created by Melania on 07/03/2018.
+ * Created by Melania on 12/03/2018.
  */
 
-
-public class ADialogEliminar extends DialogFragment {
+public class ADialogEliminarFireBase extends DialogFragment {
 
     static String nombre= "";
     ListView lvArticulos;
@@ -49,9 +47,7 @@ public class ADialogEliminar extends DialogFragment {
                 .setPositiveButton("Si", new DialogInterface.OnClickListener()  {
                     public void onClick(DialogInterface dialog, int id) {
 
-                        lista_articulos.remove(id);
-
-                        /*dbRef = FirebaseDatabase.getInstance().getReference()
+                        dbRef = FirebaseDatabase.getInstance().getReference()
                                 .child("articulos");
                         String articulos = lvArticulos.getSelectedItem().toString();
 
@@ -77,7 +73,7 @@ public class ADialogEliminar extends DialogFragment {
                                 }
 
                             }
-                        });*/
+                        });
 
                         Toast.makeText(getActivity(),
                                 "El artículo " +nombre+ " ha sido eliminado correctamente ",

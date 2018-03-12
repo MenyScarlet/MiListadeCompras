@@ -1,10 +1,13 @@
 package com.example.melania.milistadecompras;
 
 import android.content.Intent;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.util.SparseBooleanArray;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -18,6 +21,8 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 public class CListaCompraActivity extends AppCompatActivity {
+
+    static final String EXTRA_ARTICULO = "ARTICULO";
 
     ListView lvCompra;
     EditText etSuper;
@@ -44,7 +49,6 @@ public class CListaCompraActivity extends AppCompatActivity {
         cargarDatosFirebase();
 
         etSuper.setEnabled(false);
-
 
 
 
@@ -129,10 +133,6 @@ public class CListaCompraActivity extends AppCompatActivity {
 
     }
 
-    public void clickDeleteArticulo (View view){
-
-    }
-
     private void cargarDatosFirebase(){
 
         dbRef = FirebaseDatabase.getInstance().getReference().child("articulos");
@@ -165,8 +165,25 @@ public class CListaCompraActivity extends AppCompatActivity {
 
         lvCompra.setAdapter(adaptador);
 
+        lvCompra.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                AArticulo articulo = ((AArticulo) adapterView.getItemAtPosition(i));
+                Bundle b = new Bundle();
+                b.putString("NOMBRE", articulo.getNombre());
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                ADialogEliminar dialogo = new ADialogEliminar();
+                dialogo.setArguments(b);
+                dialogo.show(fragmentManager, "dialogDelete");
+
+                return true;
+            }
+        });
+
 
 
 
     }
+
 }

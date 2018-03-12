@@ -8,6 +8,7 @@ import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -42,6 +43,7 @@ public class ADialogRegistroArticulo extends DialogFragment {
         final EditText etPrecio = (EditText) viewLayout.findViewById(R.id.RegisEtPrecio);
         etPrecio.setText("0");
         final Spinner spCategoria = (Spinner) viewLayout.findViewById(R.id.RegisSpCategoria);
+        final CheckBox cbSeleccion = (CheckBox) viewLayout.findViewById(R.id.LcCbProducto);
 
         final String [] categorias = {"Selecciona", "Bebidas", "Carnes", "Cereales y Pan",
                 "Derivados de animales", "Dulces y Postres", "Frutas y Frutos secos"
@@ -64,6 +66,7 @@ public class ADialogRegistroArticulo extends DialogFragment {
                          String nombre = etNombre.getText().toString();
                          String marca = etMarca.getText().toString();
                          String mercado = etMercado.getText().toString();
+                         String stseleccion = cbSeleccion.getText().toString();
 
 
                         if(nombre.equals("") || categoria.equals("Selecciona")) {
@@ -75,9 +78,10 @@ public class ADialogRegistroArticulo extends DialogFragment {
                         }else{
 
                             double precio = Double.parseDouble(stprecio);
+                            boolean seleccion = Boolean.parseBoolean(stseleccion);
 
                             AArticulo nuevoArticulo = new AArticulo
-                                    (nombre, marca, mercado, categoria, precio);
+                                    (nombre, marca, mercado, categoria, precio, seleccion);
                             dbRef = FirebaseDatabase.getInstance().getReference().child("articulos");
 
                              /*String nueva_clave = dbRef().push().setvalue(nuevoArticulo, new DatabaseReference.

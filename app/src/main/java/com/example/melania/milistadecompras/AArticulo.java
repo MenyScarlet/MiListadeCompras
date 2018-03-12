@@ -98,6 +98,10 @@ public class AArticulo implements Parcelable {
         return seleccion;
     }
 
+    public boolean isChecked() {
+        return seleccion;
+    }
+
     public void setSeleccion(boolean seleccion) {
         this.seleccion = seleccion;
     }
@@ -116,7 +120,8 @@ public class AArticulo implements Parcelable {
         parcel.writeString(this.mercado);
         parcel.writeString(this.categoria);
         parcel.writeDouble(this.precio);
-        parcel.writeBooleanArray(this.seleccion);
+        parcel.writeByte((byte)(seleccion ? 1 : 0));
+
 
     }
 
@@ -129,7 +134,8 @@ public class AArticulo implements Parcelable {
         this.mercado = p.readString();
         this.categoria = p.readString();
         this.precio = p.readDouble();
-        this.seleccion = p.readBooleanArray();
+        this.seleccion = p.readByte() != 0;
+
 
 
 

@@ -117,8 +117,12 @@ startActivity(i);
             @Override
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
 
+                AArticulo articulo = ((AArticulo) adapterView.getItemAtPosition(i));
+                Bundle b = new Bundle();
+                b.putString("NOMBRE", articulo.getNombre());
                 FragmentManager fragmentManager = getSupportFragmentManager();
-                ADialogEliminar dialogo = new ADialogEliminar();
+                ADialogEliminarFireBase dialogo = new ADialogEliminarFireBase();
+                dialogo.setArguments(b);
                 dialogo.show(fragmentManager, "dialogConfirmacino");
 
                 return true;
